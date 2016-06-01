@@ -17,8 +17,8 @@ class Attendance:
 
     def list(self):
         print("[출석자 명단(이름:일시)]")
-        for name in self.attendances.keys():
-            print(name +": "+self.attendances[name])
+        for name, atdDate in self.attendances.items():
+            print(name +": "+atdDate)
 
 def main():
     students = ['김효성', '박건희', '손종국', '김재현', '홍창우', '임재민', '김지훈', '박문수', '박두철', '설석주', '박근일' ,'김수석']
