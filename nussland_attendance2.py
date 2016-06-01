@@ -1,3 +1,9 @@
+#
+# 출석부 만들기2
+#
+# 작성자: 김효성(nussland@gmail.com)
+# 작성일: 2016-06-01
+#
 import time
 
 class Student:
