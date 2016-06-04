@@ -20,14 +20,14 @@ class Attendance:
     USER_ACTION_EXIT = 3
 
     _user_action = 0
-    attendance = []
+    _data = []
 
     def __init__(self):
-        self.attendance.append(Attendee('박근일'))
-        self.attendance.append(Attendee('홍창우'))
-        self.attendance.append(Attendee('김수석'))
-        self.attendance.append(Attendee('홍태환'))
-        self.attendance.append(Attendee('차경묵'))
+        self._data.append(Attendee('박근일'))
+        self._data.append(Attendee('홍창우'))
+        self._data.append(Attendee('김수석'))
+        self._data.append(Attendee('홍태환'))
+        self._data.append(Attendee('차경묵'))
 
     @staticmethod
     def print_menu():
@@ -57,7 +57,7 @@ class Attendance:
             print('제대로 입력해 주세요!!')
 
     def print_attendance(self):
-        for attendee in self.attendance:
+        for attendee in self._data:
             status = '결석'
             if attendee.status:
                 status = '출석'
@@ -68,7 +68,7 @@ class Attendance:
         print('이름을 입력하세요')
         name = input()
         is_valid_attendee = False
-        for attendee in self.attendance:
+        for attendee in self._data:
             if name == attendee.name:
                 attendee.attend(status=True)
                 is_valid_attendee = True
